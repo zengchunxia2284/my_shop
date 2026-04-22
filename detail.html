@@ -34,7 +34,7 @@ img{width:100%;height:380px;object-fit:cover;}
 
 <script>
 // 获取商品数据
-let good = JSON.parse(localStorage.getItem('detail'))
+let good = JSON.parse(localStorage.getItem('detail') || '{"name":"吃堡了","image":"images/吃堡了.png","price":19.9}');
 document.getElementById('goodName').innerText = good.name
 document.getElementById('goodPrice').innerText = '¥' + good.price
 document.getElementById('goodImg').src = good.image
